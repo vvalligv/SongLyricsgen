@@ -15,7 +15,7 @@ print("Isnull: ",df.isnull().sum())
 
 df['lyrics_length'] = df['lyrics'].apply(lambda x: len(str(x).split()))
 plt.figure(figsize=(10,6))
-sns.histplot(df['lyrics_length'],bins = 50,kde = True)
+sns.histplot(df['lyrics_length'],bins = 50,kde = True) #Kde --> kernel density estimate is a flowy line which helps to visualiza
 plt.title('Distribution of Song Lyrics Length')
 plt.xlabel('No. of words')
 plt.ylabel('Frequency')

@@ -13,8 +13,8 @@ upper_bound = Q3+1.5*IQR
 print(f'Lower Bound:{lower_bound}')
 print(f'Upper Bound:{upper_bound}')
 
-df_fil = df[(df['lyrics_length']>= lower_bound) &(df['lyrics_length']<=upper_bound)]
-df_fil = df_fil.drop(columns= ["lyrics_length"])
+df_fil = df[(df['lyrics_length']>= lower_bound) &(df['lyrics_length']<=upper_bound)]#Filtering the DataFrame to Remove Outliers
+df_fil = df_fil.drop(columns= ["lyrics_length"])#Drop the column of lyrics length which is used to calculate the outliers
 
 print("Columns before saving:", df_fil.columns.tolist())
 
